@@ -7,22 +7,21 @@
 Отступы: 4 пробела на уровень (не табуляция).
 Пробелы вокруг операторов:
 
-x = 5  # правильно
-y = x + 10
+    x = 5  # правильно
+    y = x + 10
 
 Нет пробелов внутри скобок и перед запятыми:
 
-list_example = [1, 2, 3]  # правильно
+    list_example = [1, 2, 3]  # правильно
 
 Длина строки
 Максимум 79 символов для кода (по PEP 8).
 Для комментариев и docstrings — 72 символа.
 Перенос строк через \ или скобки:
 
-long_string = (
-    "Это очень длинная строка, "
+    long_string = ("Это очень длинная строка, "\
     "которую нужно перенести."
-)
+    )
 
 Именование
 Переменные и функции: snake_case (user_name, calculate_total).
@@ -38,9 +37,9 @@ long_string = (
 
 Каждый импорт — на новой строке:
 
-import os
-import sys
-from typing import List, Dict
+    import os
+    import sys
+    from typing import List, Dict
 
 
 Пустые строки
@@ -50,11 +49,11 @@ from typing import List, Dict
 
 Пример хорошо оформленного кода
 
-import os
-from typing import List
+    import os
+    from typing import List
 
 
-class UserManager:
+    class UserManager:
     """Управляет пользователями в системе."""
 
     def __init__(self, max_users: int) -> None:
@@ -69,12 +68,12 @@ class UserManager:
         return False
 
 
-def main() -> None:
+    def main() -> None:
     manager = UserManager(10)
     manager.add_user("alice")
 
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     main()
 
 Соблюдение этих правил делает код читаемым, единообразным и удобным для поддержки. Для автоматизации используйте инструменты вроде pre-commit hooks с black и flake8.
