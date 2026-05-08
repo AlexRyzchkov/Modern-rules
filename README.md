@@ -6,41 +6,40 @@
 
 Отступы: 4 пробела на уровень (не табуляция).
 Пробелы вокруг операторов:
-
-    x = 5  # правильно
-    y = x + 10
-
+```Python
+x = 5  # правильно
+y = x + 10
+```
 Нет пробелов внутри скобок и перед запятыми:
-
-    list_example = [1, 2, 3]  # правильно
-
+```Python
+list_example = [1, 2, 3]  # правильно
+```
 Длина строки
 Максимум 79 символов для кода (по PEP 8).
 Для комментариев и docstrings — 72 символа.
 Перенос строк через \ или скобки:
-
-    long_string = ("Это очень длинная строка, "\
-    "которую нужно перенести."
-    )
-
+```Python
+long_string = ("Это очень длинная строка, "\
+"которую нужно перенести.")
+```
 Именование
-Переменные и функции: snake_case (user_name, calculate_total).
+Переменные и функции: `snake_case` (`user_name`, `calculate_total`).
 
-Константы: UPPER_CASE (MAX_USERS, DEFAULT_VALUE).
+Константы: `UPPER_CASE` (`MAX_USERS`, `DEFAULT_VALUE`).
 
 
 Импорты
 Группировать импорты в порядке:
-Стандартные библиотеки (import os).
-Сторонние библиотеки (import numpy).
-Локальные модули (from . import utils).
+Стандартные библиотеки (`import os`).
+Сторонние библиотеки (`import numpy`).
+Локальные модули (`from . import utils`).
 
 Каждый импорт — на новой строке:
-
-    import os
-    import sys
-    from typing import List, Dict
-
+```Python
+import os
+import sys
+from typing import List, Dict
+```
 
 Пустые строки
 2 пустые строки перед объявлением класса или функции верхнего уровня.
@@ -48,9 +47,9 @@
 Внутри функции — для логического разделения блоков.
 
 Пример хорошо оформленного кода
-
-    import os
-    from typing import List
+```Python
+import os
+from typing import List
 
 
     class UserManager:
@@ -69,14 +68,14 @@
 
 
     def main() -> None:
-    manager = UserManager(10)
-    manager.add_user("alice")
+        manager = UserManager(10)
+        manager.add_user("alice")
 
 
     if __name__ == "__main__":
-    main()
-
-Соблюдение этих правил делает код читаемым, единообразным и удобным для поддержки. Для автоматизации используйте инструменты вроде pre-commit hooks с black и flake8.
+        main()
+```
+Соблюдение этих правил делает код читаемым, единообразным и удобным для поддержки. Для автоматизации используйте инструменты вроде `pre-commit hooks` с `black` и `flake8`.
 
 ## Цель
 Статья написана в образовательных целях на онлайн-курсе "Git и Github" в школе программирования "Лидер".
